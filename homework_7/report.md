@@ -19,4 +19,5 @@
 
 ## 4.参考
 [1] Semi-supervised Learning on Graphs with Generative Adversarial Nets,2018,Ming Ding,Jie Tang
+
 [2] [GraphSGAN by THUDM](https://github.com/THUDM/GraphSGAN)
