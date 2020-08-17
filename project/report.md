@@ -17,7 +17,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.利用梯度上升的方法对代替目标函数进行优化。
 
-&nbsp;&nbsp;&nbsp;&nbsp;B.Imitation Learning
+&nbsp;&nbsp;&nbsp;&nbsp;B.Imitation Learning（Behavior Cloning）
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主要方法是利用专家水平玩家的游戏轨迹信息训练一个深度神经网络，当成是一个分类任务。文章中使用的损失函数还是以TD loss为基础的损失函数。网络模型结构主要包括一个全连接的卷积神经网络用以处理每帧动画的图片数据；DQN结构的三层卷积网络；Impala结构的深度神经网络（包含六个或者八个残差块）。整个深度神经网络使用adam优化器，学习率为6.25x10<sup>-5</sup>, 前3x10<sup>6</sup>步的权重衰减设置为10<sup>-5</sup>。
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -27,7 +29,7 @@ baseline|ppo|MinerRLTreechop|56.31|8.31|NaN
 baseline|ppo|MinerRLNavigate|8.00|27.13|NaN
 实际实验|ppo|MinerRLTreechop|32.4|12.8|20h
 实际实验|ppo|MinerRLNavigate|4|18.2|18h
-实际实验|imitation learning |MinerRLObtainDiamond|46|21.2|80h(未跑完)
+实际实验|imitation learning |MinerRLObtainIronPickaxe|21|8.6|80h(未跑完)
 
 ## 三、参考文献
 1.<b>Proximal Policy Optimization Algorithms</b> ,John Schulman et al,2017
